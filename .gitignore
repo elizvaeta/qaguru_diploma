@@ -1,0 +1,4 @@
+.idea
+.env
+tests/allure-results
+tests/local_conftest.py
