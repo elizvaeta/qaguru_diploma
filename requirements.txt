@@ -2,3 +2,7 @@ pytest==8.1.1
 selene==2.0.0rc9
 allure-pytest==2.13.5
 python-dotenv==1.0.0
+requests==2.32.3
+jsonschema==4.22.0
+dataclasses-json==0.6.7
+faker==25.8.0

@@ -2,12 +2,13 @@
 
 > <a target="_blank" href="https://www.tinkoff.ru/career/it/about/">Ссылка на раздел</a>
 
-![Тестируемая страница](/design/main_page.png)
+![Тестируемая страница](/readme/main_page.png)
 
 ## :pencil: Содержание:
 
 - [Используемый стэк](#hammer_and_wrench-используемый-стэк)
 - [Реализованные UI-проверки](#white_check_mark-реализованные-ui-проверки)
+- [Реализованные API-проверки](#white_check_mark-реализованные-api-проверки)
 - [Запуск тестов](#arrow_forward-запуск-тестов)
     - [Jenkins](#jenkins)
     - [Локально](#локально)
@@ -51,6 +52,26 @@
 - [x] Наличие верхнего меню на всех страницах
 - [x] Наличие ссылок на социальные сети в футере на всех страницах
 
+### :white_check_mark: Реализованные API-проверки
+
+#### Просмотр доступных тегов для фильтрации:
+
+- [x] Успешная отправка запроса
+- [x] Отправка некорректного тела ответа
+- [x] Соответствие ответа json-схеме
+
+#### Просмотр списка вакансий:
+
+- [x] Успешная отправка запроса
+- [x] Отправка некорректного тела ответа
+- [x] Соответствие ответа json-схеме
+
+#### Просмотр вакансии:
+
+- [x] Успешный просмотр рандомной вакансии
+- [x] Отправка некорректного id вакансии
+- [x] Соответствие ответа json-схеме
+
 ## :arrow_forward: Запуск тестов
 
 ### Jenkins
@@ -59,11 +80,11 @@
 
 > 1. Нажать кнопку "Build with Parameters"
 >
->![Сборка в Jenkins](/design/jenkins_1.png)
+>![Сборка в Jenkins](/readme/jenkins_1.png)
 
 > 2. Выбрать параметры
 >
-> ![Сборка в Jenkins](/design/jenkins_2.png)
+> ![Сборка в Jenkins](/readme/jenkins_2.png)
 
 > 3. Нажать "Build"
 
@@ -84,7 +105,7 @@ pytest --alluredir tests/allure-results/
 
 > В Jenkins можно открыть отчет после окончания сборки, выбрав сборку и перейдя по ссылке созданного артефакта:
 >
-> ![Отчет Allure в Jenkins](/design/jenkins_allure.png)
+> ![Отчет Allure в Jenkins](/readme/jenkins_allure.png)
 
 > Для просмотра отчета локально нужно ввести команду:
 
@@ -94,15 +115,15 @@ allure serve tests/allure-results
 
 > Примеры отображения тестов:
 >
->![Отчет в Allure](/design/allure_1.png)
-> ![Отчет в Allure](/design/allure_2.png)
+>![Отчет в Allure](/readme/allure_1.png)
+> ![Отчет в Allure](/readme/allure_2.png)
 >
 > Видео с прохождением теста:
 >
-> ![Отчет в Allure](/design/allure_3.gif)
+> ![Отчет в Allure](/readme/allure_3.gif)
 
 ### Telegram
 
 > Отчет о пройденных тестах приходит в Telegram:
 >
->![Отчет в Telegram](/design/report_telegram.png)
+>![Отчет в Telegram](/readme/report_telegram.png)

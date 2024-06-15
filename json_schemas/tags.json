@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "response": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "urlSlug": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "urlSlug"
+        ]
+      }
+    }
+  },
+  "required": [
+    "response"
+  ]
+}

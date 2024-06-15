@@ -1,0 +1,200 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "specialty": {
+          "type": "string"
+        },
+        "specialtyInfo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "deletedAt": {
+              "type": "null"
+            },
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "name": {
+              "type": "string"
+            },
+            "order": {
+              "type": "integer"
+            },
+            "desktopImageUrl": {
+              "type": "null"
+            },
+            "mobileImageUrl": {
+              "type": "null"
+            },
+            "urlSlug": {
+              "type": "string"
+            },
+            "categoryId": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "required": [
+            "createdAt",
+            "deletedAt",
+            "id",
+            "name",
+            "order",
+            "urlSlug"
+          ]
+        },
+        "city": {
+          "type": "string"
+        },
+        "experiences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "order"
+            ]
+          }
+        },
+        "tasks": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "string"
+        },
+        "responsibilities": {
+          "type": "string"
+        },
+        "offer": {
+          "type": "string"
+        },
+        "urlSlug": {
+          "type": "string"
+        },
+        "externalId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "category": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "deletedAt": {
+              "type": "null"
+            },
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "name": {
+              "type": "string"
+            },
+            "order": {
+              "type": "integer"
+            },
+            "desktopImageUrl": {
+              "type": "null"
+            },
+            "mobileImageUrl": {
+              "type": "null"
+            },
+            "urlSlug": {
+              "type": "string"
+            },
+            "categoryId": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "required": [
+            "createdAt",
+            "deletedAt",
+            "id",
+            "name",
+            "order",
+            "urlSlug"
+          ]
+        },
+        "cities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isResumeRequired": {
+          "type": "boolean"
+        },
+        "shortDescription": {
+          "type": "string"
+        },
+        "assignmentType": {
+          "type": "null"
+        },
+        "desktopImageUrl": {
+          "type": "null"
+        },
+        "mobileImageUrl": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "assignmentType",
+        "category",
+        "cities",
+        "city",
+        "desktopImageUrl",
+        "experiences",
+        "externalId",
+        "id",
+        "isResumeRequired",
+        "mobileImageUrl",
+        "offer",
+        "requirements",
+        "responsibilities",
+        "shortDescription",
+        "specialty",
+        "specialtyInfo",
+        "status",
+        "tasks",
+        "title",
+        "urlSlug"
+      ]
+    }
+  },
+  "required": [
+    "response"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "total": {
+                "type": "integer"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "grades": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "order": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "order"
+                        ]
+                      }
+                    },
+                    "specialty": {
+                      "type": "string"
+                    },
+                    "cities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "isResumeRequired": {
+                      "type": "boolean"
+                    },
+                    "shortDescription": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "cities",
+                    "grades",
+                    "id",
+                    "isResumeRequired",
+                    "shortDescription",
+                    "specialty",
+                    "title"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "items",
+              "title",
+              "total"
+            ]
+          }
+        }
+      },
+      "required": [
+        "items"
+      ]
+    }
+  },
+  "required": [
+    "response"
+  ]
+}
