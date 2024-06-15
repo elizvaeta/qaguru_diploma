@@ -134,6 +134,14 @@ allure serve tests/allure-results
 
 ![Отчет в Allure](/readme/allure_3.gif)
 
+Также после прохождения тестов в Jenkins, они автоматически импортируются в виде тест-кейсов в Allure TestOps
+
+![Тест-кейсы в Allure TestOps](/readme/allure_testops_1.png)
+
+Там же хранятся ручные тест-кейсы:
+
+![Тест-кейсы в Allure TestOps](/readme/allure_testops_2.png)
+
 ### Telegram
 
 Отчет о пройденных тестах приходит в Telegram:
