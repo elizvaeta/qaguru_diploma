@@ -1,9 +1,11 @@
+import pytest
 from faker import Faker
 from helpers.api.vacancy_manager import find_random_vacancy_id
 from helpers.api_requests import api_get
 from helpers.json_validator import assert_json_schema
 
 
+@pytest.mark.api_test
 class TestPostVacanciesList:
     def setup_class(self):
         self.url = '/v2/getVacancy'

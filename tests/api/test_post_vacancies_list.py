@@ -1,8 +1,10 @@
+import pytest
 from helpers.api_requests import api_post
 from helpers.json_validator import assert_json_schema
 from models.api.post_vacancies_body import body_default, body_with_specialties
 
 
+@pytest.mark.api_test
 class TestPostVacanciesList:
     def setup_class(self):
         self.url = '/v1/getVacanciesList'

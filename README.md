@@ -76,54 +76,66 @@
 
 ### Jenkins
 
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-ekazova-lesson_14/">Ссылка на Jenkins</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-ekazova-lesson_14/">Ссылка на Jenkins</a>
 
-> 1. Нажать кнопку "Build with Parameters"
->
->![Сборка в Jenkins](/readme/jenkins_1.png)
+1. Нажать кнопку "Build with Parameters"
 
-> 2. Выбрать параметры
->
-> ![Сборка в Jenkins](/readme/jenkins_2.png)
+![Сборка в Jenkins](/readme/jenkins_1.png)
 
-> 3. Нажать "Build"
+2. Выбрать параметры
+
+![Сборка в Jenkins](/readme/jenkins_2.png)
+
+3. Нажать "Build"
 
 ### Локально
 
-> 1. Склонировать репозиторий
-> 2. Открыть проект и установить интерпретатор
-> 3. Создать файл с переменными окружения `.env` по образцу в корне проекта
-> 4. Запустить тесты:
+1. Склонировать репозиторий
+2. Открыть проект и установить интерпретатор
+3. Создать файл с переменными окружения `.env` по образцу в корне проекта
+4. Запустить тесты
 
 ```bash
-pytest --alluredir tests/allure-results/
+pytest
+```
+
+Можно запустить только api-тесты или только ui-тесты, используя марки:
+
+```bash
+pytest -m api_test
+```
+
+или
+
+```bash
+pytest -m ui_test
 ```
 
 ## :bar_chart: Отчеты о прохождении тестов
 
 ### Allure
 
-> В Jenkins можно открыть отчет после окончания сборки, выбрав сборку и перейдя по ссылке созданного артефакта:
->
-> ![Отчет Allure в Jenkins](/readme/jenkins_allure.png)
+В Jenkins можно открыть отчет после окончания сборки, выбрав сборку и перейдя по ссылке созданного артефакта:
 
-> Для просмотра отчета локально нужно ввести команду:
+![Отчет Allure в Jenkins](/readme/jenkins_allure.png)
+
+Для просмотра отчета локально нужно ввести команду:
 
 ```bash
 allure serve tests/allure-results
 ```
 
-> Примеры отображения тестов:
->
->![Отчет в Allure](/readme/allure_1.png)
-> ![Отчет в Allure](/readme/allure_2.png)
->
-> Видео с прохождением теста:
->
-> ![Отчет в Allure](/readme/allure_3.gif)
+Примеры отображения тестов:
+
+![Отчет в Allure](/readme/allure_1.png)
+![Отчет в Allure](/readme/allure_2.png)
+
+Видео с прохождением теста:
+
+![Отчет в Allure](/readme/allure_3.gif)
 
 ### Telegram
 
-> Отчет о пройденных тестах приходит в Telegram:
->
->![Отчет в Telegram](/readme/report_telegram.png)
+Отчет о пройденных тестах приходит в Telegram:
+
+![Отчет в Telegram](/readme/report_telegram.png)

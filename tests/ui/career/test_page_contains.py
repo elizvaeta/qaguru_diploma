@@ -1,6 +1,8 @@
+import pytest
 from models.pages.career_page import career_page
 
 
+@pytest.mark.ui_test
 class TestPageContains:
     def setup_method(self):
         career_page.open()

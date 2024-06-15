@@ -1,9 +1,11 @@
+import pytest
 from models.pages.career_fast_offers_page import career_fast_offers_page
 from models.pages.career_it_page import career_it_page
 from models.pages.career_page import career_page
 from models.pages.menu import menu
 
 
+@pytest.mark.ui_test
 class TestMenu:
     def test_career_page_have_menu(self):
         career_page.open()

@@ -1,9 +1,11 @@
+import pytest
 from models.pages.career_fast_offers_page import career_fast_offers_page
 from models.pages.career_it_page import career_it_page
 from models.pages.career_page import career_page
 from models.pages.footer import footer
 
 
+@pytest.mark.ui_test
 class TestFooter:
     def test_career_page_have_social_medias(self):
         career_page.open()

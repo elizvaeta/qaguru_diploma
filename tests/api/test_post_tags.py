@@ -1,8 +1,10 @@
+import pytest
 from helpers.api_requests import api_post
 from helpers.json_validator import assert_json_schema
 from models.api.post_tags_body import body_with_specialties, body_default
 
 
+@pytest.mark.api_test
 class TestPostTags:
     def setup_class(self):
         self.url = '/v1/getTags'

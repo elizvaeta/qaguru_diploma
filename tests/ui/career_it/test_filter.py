@@ -2,6 +2,7 @@ import pytest
 from models.pages.career_it_page import career_it_page
 
 
+@pytest.mark.ui_test
 class TestFilter:
     def setup_method(self):
         career_it_page.open()
