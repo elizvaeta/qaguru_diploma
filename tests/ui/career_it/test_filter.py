@@ -1,12 +1,17 @@
+import allure
 import pytest
 from models.pages.career_it_page import career_it_page
 
 
+@allure.tag('ui')
+@allure.epic('Страница "Вакансии"')
+@allure.story('Фильтрация вакансий')
 @pytest.mark.ui_test
 class TestFilter:
     def setup_method(self):
         career_it_page.open()
 
+    @allure.title('Фильтрация по направлению')
     @pytest.mark.parametrize(
         'specialty',
         [
@@ -23,6 +28,7 @@ class TestFilter:
         career_it_page.filter_specialty_should_have_value(specialty)
         career_it_page.specialty_title_should_have_value(specialty)
 
+    @allure.title('Фильтрация по уровню')
     @pytest.mark.parametrize(
         'experience',
         [
@@ -38,6 +44,7 @@ class TestFilter:
 
         career_it_page.filter_experiences_should_have_value(experience)
 
+    @allure.title('Фильтрация по городу')
     @pytest.mark.parametrize(
         'city',
         [

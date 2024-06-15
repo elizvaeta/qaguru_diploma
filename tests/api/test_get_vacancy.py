@@ -1,3 +1,4 @@
+import allure
 import pytest
 from faker import Faker
 from helpers.api.vacancy_manager import find_random_vacancy_id
@@ -5,6 +6,8 @@ from helpers.api_requests import api_get
 from helpers.json_validator import assert_json_schema
 
 
+@allure.tag('api')
+@allure.epic('Просмотр вакансии')
 @pytest.mark.api_test
 class TestPostVacanciesList:
     def setup_class(self):
@@ -12,6 +15,7 @@ class TestPostVacanciesList:
 
         self.url_slug = find_random_vacancy_id()
 
+    @allure.title('Успешный просмотр вакансии')
     def test_success(self):
         params = {
             'urlSlug': self.url_slug
@@ -23,6 +27,7 @@ class TestPostVacanciesList:
         assert response.status_code == 200
         assert response_body['response']
 
+    @allure.title('Получение ошибки при просмотре несуществующей вакансии')
     def test_negative_random_url_slug(self):
         params = {
             'urlSlug': Faker().word()
@@ -35,6 +40,7 @@ class TestPostVacanciesList:
         assert response_body['error']['message'] == 'Vacancy not found'
         assert response_body['error']['errcode'] == 'ENOTFOUND'
 
+    @allure.title('Проверка JSON-схемы')
     def test_json_schema(self):
         params = {
             'urlSlug': self.url_slug

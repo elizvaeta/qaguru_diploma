@@ -76,7 +76,7 @@
 
 ### Jenkins
 
-<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-ekazova-lesson_14/">Ссылка на Jenkins</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-ekazova-diploma">Ссылка на Jenkins</a>
 
 1. Нажать кнопку "Build with Parameters"
 

@@ -1,14 +1,18 @@
+import allure
 import pytest
 from helpers.api_requests import api_post
 from helpers.json_validator import assert_json_schema
 from models.api.post_tags_body import body_with_specialties, body_default
 
 
+@allure.tag('api')
+@allure.epic('Просмотр списка тегов')
 @pytest.mark.api_test
 class TestPostTags:
     def setup_class(self):
         self.url = '/v1/getTags'
 
+    @allure.title('Успешный просмотр списка тегов')
     def test_success(self):
         request_body = body_default
 
@@ -18,6 +22,7 @@ class TestPostTags:
         assert response.status_code == 200
         assert response_body['response']
 
+    @allure.title('Фильтрация по направлению')
     def test_filter_specialties_qa(self):
         request_body = body_with_specialties
 
@@ -27,6 +32,7 @@ class TestPostTags:
         assert response.status_code == 200
         assert not response_body['response']
 
+    @allure.title('Получение ошибки при пустом теле запроса')
     def test_negative_empty_body(self):
         response = api_post(url=self.url)
         response_body = response.json()
@@ -35,6 +41,7 @@ class TestPostTags:
         assert response_body['error']['message'] == 'invalid request'
         assert response_body['error']['errcode'] == 'EINVALID'
 
+    @allure.title('Проверка JSON-схемы')
     def test_json_schema(self):
         request_body = body_default
 
