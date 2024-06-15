@@ -134,13 +134,21 @@ allure serve tests/allure-results
 
 ![Отчет в Allure](/readme/allure_3.gif)
 
-Также после прохождения тестов в Jenkins, они автоматически импортируются в виде тест-кейсов в Allure TestOps
+Также после прохождения тестов в Jenkins, они автоматически импортируются в виде тест-кейсов в Allure TestOps:
 
 ![Тест-кейсы в Allure TestOps](/readme/allure_testops_1.png)
 
 Там же хранятся ручные тест-кейсы:
 
 ![Тест-кейсы в Allure TestOps](/readme/allure_testops_2.png)
+
+В проекте также есть пример упавшего теста:
+
+![Упавший тест](/readme/allure_testops_3.png)
+
+Не волнуйтесь, на него уже заведён баг:
+
+![Упавший тест в Jira](/readme/jira_1.png)
 
 ### Telegram
 
