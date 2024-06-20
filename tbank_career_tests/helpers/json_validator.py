@@ -1,8 +1,8 @@
 import json
 
 from jsonschema.validators import validate
-from paths import JSON_SCHEMAS_DIR
 from requests import Response
+from tbank_career_tests.helpers.paths import JSON_SCHEMAS_DIR
 
 
 def assert_json_schema(response: Response, schema_name: str) -> None:

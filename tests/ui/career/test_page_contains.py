@@ -1,6 +1,6 @@
 import allure
 import pytest
-from models.pages.career_page import career_page
+from tbank_career_tests.models.pages.career_page import career_page
 
 
 @allure.tag('ui')

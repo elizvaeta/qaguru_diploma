@@ -1,9 +1,9 @@
 import allure
 import pytest
-from models.pages.career_fast_offers_page import career_fast_offers_page
-from models.pages.career_it_page import career_it_page
-from models.pages.career_page import career_page
-from models.pages.footer import footer
+from tbank_career_tests.models.pages.career_fast_offers_page import career_fast_offers_page
+from tbank_career_tests.models.pages.career_it_page import career_it_page
+from tbank_career_tests.models.pages.career_page import career_page
+from tbank_career_tests.models.pages.footer import footer
 
 
 @allure.tag('ui')
