@@ -150,6 +150,12 @@ allure serve tests/allure-results
 
 ![Упавший тест в Jira](/readme/jira_1.png)
 
+Также есть задача в Jira для команды тестирования, в которую прилинкованы все написанные тест-кейсы:
+
+![Задача Jira](/readme/jira_2.png)
+
+![Задача Jira](/readme/jira_3.png)
+
 ### Telegram
 
 Отчет о пройденных тестах приходит в Telegram:
